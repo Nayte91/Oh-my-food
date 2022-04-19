@@ -1,0 +1,50 @@
+.operation__card {
+	position: relative;
+	animation: fadein 2s;
+	height: 75px;
+	display: flex;
+	align-items: center;
+	text-align: start;
+	border-radius: 25px;
+	background-color: $fair;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	margin: 0.75em 0;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #f6edff;
+
+		.fas {
+			color: $primaire;
+		}
+	}
+
+	.operation__card--num {
+		display: flex;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		width: 1em;
+		font-size: 15px;
+		margin: 0 2em 0 -0.5em;
+		padding: 0.2em;
+		border-radius: 50%;
+		background-color: $primaire;
+		color: #ffffff;
+	}
+
+	.fas {
+		color: $fas;
+	}
+
+	.operation__card__quote {
+		display: flex;
+		margin-left: 2.5em;
+	}
+}
+
+@media (min-width: 767px) {
+	.operation__card {
+		width: 20em;
+	}
+}

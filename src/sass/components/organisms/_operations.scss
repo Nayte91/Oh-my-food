@@ -1,0 +1,80 @@
+@import '../molecules/operation-card';
+
+.operations {
+	font-family: $texte;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 1em;
+
+	.operations__heading {
+		font-family: $texte;
+		font-size: 1.5em;
+	}
+
+	@keyframes fadein {
+		from {
+			top: 50px;
+			opacity: 0;
+		}
+		to {
+			top: 0px;
+			opacity: 1;
+		}
+	}
+}
+
+@media (min-width: 767px) and (max-width: 1249px) {
+	.operations {
+		display: grid;
+		flex-direction: row;
+		gap: 1em 2em;
+		grid-template-areas:
+			'. oph oph oph .'
+			'. op1 op1 op1 .'
+			'. op2 op2 op2 .'
+			'. op3 op3 op3 .';
+
+		.op1 {
+			grid-area: op1;
+		}
+		.op2 {
+			grid-area: op2;
+		}
+		.op3 {
+			grid-area: op3;
+		}
+		.operations__heading {
+			text-align: center;
+			grid-area: oph;
+		}
+	}
+}
+
+@media (min-width: 1250px) {
+	.operations {
+		display: grid;
+		flex-direction: row;
+		gap: 1em 2em;
+		grid-template-areas:
+			'. oph oph oph .'
+			'. op1 op2 op3 .';
+
+		.op1 {
+			grid-area: op1;
+		}
+
+		.op2 {
+			grid-area: op2;
+		}
+
+		.op3 {
+			grid-area: op3;
+		}
+
+		.operations__heading {
+			text-align: center;
+			grid-area: oph;
+		}
+	}
+}

@@ -1,0 +1,73 @@
+@import '../molecules/restaurant-card';
+
+.restaurants {
+	font-family: $texte;
+	background-color: $fair;
+	padding-top: 2em;
+	margin-top: 3em;
+
+	.restaurants__heading {
+		margin: 1em 0 0 0.7em;
+		font-size: 1.5em;
+	}
+}
+
+@media (min-width: 767px) and (max-width: 1249px) {
+	.restaurants {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas:
+			'. e e .'
+			'. a b .'
+			'. c d .';
+
+		.a {
+			grid-area: a;
+		}
+		.b {
+			grid-area: b;
+		}
+		.c {
+			grid-area: c;
+		}
+		.d {
+			grid-area: d;
+		}
+		.e {
+			grid-area: e;
+		}
+	}
+}
+
+@media (min-width: 1250px) {
+	.restaurants {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas:
+			'. e e . '
+			'. a b . '
+			'. c d . ';
+
+		.a {
+			grid-area: a;
+		}
+		.b {
+			grid-area: b;
+		}
+		.c {
+			grid-area: c;
+		}
+		.d {
+			grid-area: d;
+		}
+		.e {
+			grid-area: e;
+		}
+
+		.restaurants__heading {
+			display: grid;
+			justify-content: center;
+			margin-bottom: 1em;
+		}
+	}
+}
